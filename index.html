@@ -4,7 +4,22 @@
 		<title>Hello World!</title>
 	</head>
 	<body>
-		<p>Hello World!</p>
-		<img src="/images/baldr_glasses.jpg" />
+		Do you like dogs?
+		<button onclick="buttonClick('yes')">Yes</button>
+		<button onclick="buttonClick('No')">No</button>
+		<div id="imgContainer" style="display:none;">
+			<img src="/images/baldr_glasses.jpg" />
+		</div>
 	</body>
 </html>
+
+<script>
+	function buttonClick(n) {
+		if ( n == 'yes' ) {
+			document.getElementById('imgContainer').style.display = 'block';
+		} else {
+			document.getElementById('imgContainer').style.display = 'none';
+			location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+		}
+	}
+</script>
